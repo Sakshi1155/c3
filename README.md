@@ -50,4 +50,12 @@ To use this contract, deploy it to an Ethereum-compatible blockchain. You can th
 ### Example Interactions
 - `requireEX(uint newBudget)`:
   - Call `requireEX(50000)`. If `newBudget` is not zero, it will set `budget` to 50,000. If `newBudget` is zero, it will throw an error.
-- `assert
+- `assertEX()`:
+  - Call `assertEX()`. It will return the total impact of `budget` and `reach` and a message indicating the success or need for improvement of the campaign.
+- `revertEX(uint256 newReach)`:
+  - Call `revertEX(8000)`. It will revert with the message "Campaign reach is too low."
+  - Call `revertEX(25000)`. It will revert with the message "Campaign reach is average."
+
+## License
+
+This contract is licensed under the MIT License. See the LICENSE file for more details.
